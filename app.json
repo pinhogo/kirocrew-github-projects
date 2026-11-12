@@ -1,0 +1,97 @@
+{
+  "name": "github-projects",
+  "version": "1.0.0",
+  "displayName": "GitHub Projects",
+  "description": "Manage GitHub Projects v2 tasks inside Kiro Crew with dynamic Kanban and table views, instant column status updates, quick draft issue creation, and real-time filtering. Automatically detects your authenticated GitHub CLI owner or switches cleanly to any organization board.",
+  "author": "pinho",
+  "license": "MIT",
+  "tags": [
+    "developer-tools",
+    "productivity",
+    "github",
+    "issue-triage",
+    "git",
+    "worktrees"
+  ],
+  "highlights": [
+    "Dynamic Kanban board and issue table view with instant switching",
+    "One-click status transitions, draft task creation, and safe deletion",
+    "Auto-detects the authenticated GitHub CLI user and switches between personal or organization projects",
+    "Includes the project-manager specialist agent and github-projects workflow skill"
+  ],
+  "useCases": [
+    "Triage and prioritize GitHub Projects v2 backlogs directly inside the Kiro Crew dashboard without switching browser tabs",
+    "Move cards across workflow stages or inspect all repository items side by side in compact multi-column or table layouts",
+    "Collaborate with the bundled project-manager agent and github-projects skill to break down requirements and update task status"
+  ],
+  "configuration": [
+    "Authenticate the GitHub CLI with the project scope (`gh auth login --scopes project` or `gh auth refresh -s project`)",
+    "Enable third-party app execution in `~/.kiro/crew/config.json` (`agent.apps_allow_third_party: true`) because this app runs a local Python backend"
+  ],
+  "links": [
+    {
+      "label": "GitHub Repository",
+      "url": "https://github.com/pinhogo/kirocrew-github-projects"
+    }
+  ],
+  "l10n": {
+    "pt-BR": {
+      "displayName": "GitHub Projects",
+      "description": "Quadro Kanban e gestão completa de tarefas para GitHub Projects v2 integrado ao Kiro Crew.",
+      "pageLabel": "GitHub Projects",
+      "highlights": [
+        "Quadro Kanban e Tabela com alternância instantânea e múltiplas colunas",
+        "Criação rápida de tasks, transição livre de status e exclusão em tempo real",
+        "Detecção automática do usuário autenticado no gh CLI e alternância entre projetos e organizações",
+        "Acompanha agente especialista project-manager e skill github-projects"
+      ]
+    }
+  },
+  "iconPath": "assets/icon.png",
+  "heroImage": "assets/hero-light.png",
+  "heroImageDark": "assets/hero-dark.png",
+  "screenshots": [
+    "assets/screenshots/kanban-board.png",
+    "assets/screenshots/table-view.png",
+    "assets/screenshots/create-task-modal.png"
+  ],
+  "agents": [
+    "agents/project-manager.json"
+  ],
+  "skills": [
+    "skills/github-projects"
+  ],
+  "dependencies": {
+    "commands": [
+      "gh",
+      "python3"
+    ]
+  },
+  "platform": {
+    "os": [
+      "macos",
+      "linux",
+      "windows"
+    ]
+  },
+  "backend": {
+    "entryPoint": "backend/server.py",
+    "port": "auto",
+    "healthCheck": "/health"
+  },
+  "ui": {
+    "entry": "dist/index.mjs",
+    "pages": [
+      {
+        "route": "/apps/github-projects",
+        "label": "GitHub Projects",
+        "icon": "FolderGit2"
+      }
+    ]
+  },
+  "permissions": {
+    "api": [
+      "/apps/github-projects/api/*"
+    ]
+  }
+}

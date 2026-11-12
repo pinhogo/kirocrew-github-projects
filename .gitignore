@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+ui/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# App Kit data (runtime only)
+data/
+data/logs/
+installed.json
