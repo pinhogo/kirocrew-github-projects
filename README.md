@@ -20,6 +20,12 @@ Native **GitHub Projects v2** Kanban board and issue table integrated into **Kir
 ### Quick Task Creation Modal
 ![Create Task Modal](assets/screenshots/create-task-modal.png)
 
+### Chat Interaction: Issue Triage & Priorities
+![Chat Issue Triage](assets/screenshots/chat-issues-triage.png)
+
+### Chat Interaction: Create & Update Tasks
+![Chat Task Actions](assets/screenshots/chat-task-actions.png)
+
 ---
 
 ## ✨ Features

@@ -176,7 +176,7 @@ class AppHandler(BaseHTTPRequestHandler):
                 return self._send_json(500, {"ok": False, "error": str(exc)})
 
         if path in ("/api/status", "/status", "/api/apps/github-projects/status"):
-            return self._send_json(200, {"app": APP_NAME, "version": "1.0.0", "status": "active"})
+            return self._send_json(200, {"app": APP_NAME, "version": "1.0.1", "status": "active"})
 
         return self._send_json(404, {"ok": False, "error": f"Path not found: {path}"})
 
